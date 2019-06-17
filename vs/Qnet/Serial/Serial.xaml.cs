@@ -234,16 +234,14 @@ namespace Qnet
                 //字符串显示
                 if (hexadecimalDisplayCheckBox.IsChecked == false)
                 {
-                    receiveTextBox.AppendText(receiveText);
+                    receiveTextBox.Text += receiveText;
                    
                 }                                   
                 else //16进制显示
                 {
-                    byte[] recData = System.Text.Encoding.Default.GetBytes(receiveText);// 将接受到的字符串据转化成数组；  
-                    
-                    foreach (byte str in recData)
+                    foreach (byte str in receiveText)
                     {
-                        receiveTextBox.AppendText(string.Format("{0:X2} ", str));
+                        receiveTextBox.Text += string.Format("{0:X2} ",str);
                     }
                 }
             }
@@ -494,26 +492,31 @@ namespace Qnet
              stopShowingButton.Content = "停止显示";
          }
 
-         //private void ChangeFileNameButton_Click(object sender, RoutedEventArgs e)
-         //{
-         //    if (receiveTextBox.Text == string.Empty)
-         //    {
-         //        MessageBox.Show("接收区为空，不保存！");
-         //    }
-         //    else 
-         //    {
-         //        OpenFileDialog selectFile = new OpenFileDialog();
-         //        selectFile.Filter = "TXT文本|*.txt";
+        private void FileNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
-         //        if (selectFile.ShowDialog() == true)
-         //        {
-         //            receiveFileNameTextBox.Text = selectFile.FileName;
-         //        }
-                
-         //    }
-         //}
+        }
+
+        //private void ChangeFileNameButton_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (receiveTextBox.Text == string.Empty)
+        //    {
+        //        MessageBox.Show("接收区为空，不保存！");
+        //    }
+        //    else 
+        //    {
+        //        OpenFileDialog selectFile = new OpenFileDialog();
+        //        selectFile.Filter = "TXT文本|*.txt";
+
+        //        if (selectFile.ShowDialog() == true)
+        //        {
+        //            receiveFileNameTextBox.Text = selectFile.FileName;
+        //        }
+
+        //    }
+        //}
 
 
-    
+
     }
 }

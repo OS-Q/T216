@@ -78,33 +78,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DynamicBufferManager.cs" />
-    <Compile Include="Fourm\Fourm.xaml.cs">
-      <DependentUpon>Fourm.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GPS\GPSMap.xaml.cs">
-      <DependentUpon>GPSMap.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GSMFunction\GSMAssistant.xaml.cs">
-      <DependentUpon>GSMAssistant.xaml</DependentUpon>
-    </Compile>
     <Compile Include="network\Network.xaml.cs">
       <DependentUpon>Network.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SerialBasic\SerialBasic.xaml.cs">
-      <DependentUpon>SerialBasic.xaml</DependentUpon>
+    <Compile Include="Serial\Serial.xaml.cs">
+      <DependentUpon>Serial.xaml</DependentUpon>
     </Compile>
-    <Page Include="Fourm\Fourm.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="GPS\GPSMap.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="GSMFunction\GSMAssistant.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -121,7 +100,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SerialBasic\SerialBasic.xaml">
+    <Page Include="Serial\Serial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,9 +152,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GPS\baiDuMap.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Resource Include="net.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
