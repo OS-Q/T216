@@ -20,7 +20,7 @@ using System.Windows.Threading;
 using System.Text.RegularExpressions;
 using Microsoft.Win32;
 
-namespace wildfire_MultiFuctionalSerial_assistant
+namespace Qnet
 {
     /// <summary>
     /// SerialBasic.xaml 的交互逻辑

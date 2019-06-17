@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace wildfire_MultiFuctionalSerial_assistant
+namespace Qnet
 {
     public class DynamicBufferManager
     {
@@ -155,7 +155,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace wildfire_MultiFuctionalSerial_assistant
+namespace Qnet
 {
     public class DynamicBufferManager
     {

@@ -32,7 +32,7 @@ using System.Collections;
 
 
 
-namespace wildfire_MultiFuctionalSerial_assistant
+namespace Qnet
 {
     /// <summary>
     /// network.xaml 的交互逻辑

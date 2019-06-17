@@ -26,7 +26,7 @@ using System.IO;
 using System.Diagnostics;
 
 
-namespace wildfire_MultiFuctionalSerial_assistant
+namespace Qnet
 {
     /// <summary>
     /// GPS_map.xaml 的交互逻辑

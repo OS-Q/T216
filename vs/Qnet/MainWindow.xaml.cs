@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 
-namespace wildfire_MultiFuctionalSerial_assistant
+namespace Qnet
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
@@ -35,7 +35,7 @@ namespace wildfire_MultiFuctionalSerial_assistant
                 softWareMainWindow.Width = 1250;
                 softWareMainWindow.Height = 680;
 
-                //GPSItem.Content = new wildfire_MultiFuctionalSerial_assistant.SerialBasic(); 
+                //GPSItem.Content = new Qnet.SerialBasic(); 
 
             
                
@@ -45,7 +45,7 @@ namespace wildfire_MultiFuctionalSerial_assistant
                 softWareMainWindow.Width = 1250;
                 softWareMainWindow.Height = 680;
 
-                //FourmItem.Content = new wildfire_MultiFuctionalSerial_assistant.GPSMap();
+                //FourmItem.Content = new Qnet.GPSMap();
                
 
 
@@ -57,8 +57,9 @@ namespace wildfire_MultiFuctionalSerial_assistant
             }
         }
 
-      
+        private void Network_Loaded(object sender, RoutedEventArgs e)
+        {
 
-       
+        }
     }
 }

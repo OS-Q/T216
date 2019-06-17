@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 
 using System.Reflection;
 
-namespace wildfire_MultiFuctionalSerial_assistant
+namespace Qnet
 {
     /// <summary>
     /// Fourm.xaml 的交互逻辑
