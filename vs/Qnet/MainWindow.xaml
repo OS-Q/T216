@@ -7,7 +7,7 @@
     <Grid >
         <TabControl Name="functionTabControl" SelectionChanged="FunctionTabControl_SelectionChanged">
             <TabItem Header="网络调试">
-                <MultiFunction:Network Loaded="Network_Loaded" ></MultiFunction:Network>
+                <MultiFunction:Network Loaded="Network_Loaded" Margin="0,-2,0,2" ></MultiFunction:Network>
             </TabItem>
             <TabItem Header="串口调试">
                 <MultiFunction:SerialBasic ></MultiFunction:SerialBasic>

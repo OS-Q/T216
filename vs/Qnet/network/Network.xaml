@@ -40,7 +40,7 @@
 
 
         <!--串口配置面板-->
-        <Border x:Name="serialSettingBorder" BorderBrush="#FFC5BCBC" BorderThickness="1" Padding="2,2,2,2" Margin="5,5,5,0" Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" Height="215" Background="#FF44C76E"  >
+        <Border x:Name="serialSettingBorder" BorderBrush="#FFC5BCBC" BorderThickness="1" Padding="2,2,2,2" Margin="5,5,5,0" Grid.Row="0" Grid.Column="0"  VerticalAlignment="Top" Height="215" Background="#0044C76E"  >
 
             <Grid >
                 <Grid.RowDefinitions>
@@ -89,7 +89,7 @@
         </Border>
 
         <!--串口接收面板-->
-        <Border BorderBrush="#FFC5BCBC"  BorderThickness="1" Padding="2,2,2,2" Margin="5,224,5,0" Grid.Column="0"  Grid.Row="0" Height="112" VerticalAlignment="Top" Background="#FF44C76E" >
+        <Border BorderBrush="#FFC5BCBC"  BorderThickness="1" Padding="2,2,2,2" Margin="5,224,5,0" Grid.Column="0"  Grid.Row="0" Height="112" VerticalAlignment="Top" Background="#0044C76E" >
             <Grid Height="107" VerticalAlignment="Top" Margin="-3,0,0,0" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="43*"/>
@@ -112,7 +112,7 @@
         </Border>
 
         <!--串口发送面板-->
-        <Border Name="sendControlBorder"  BorderBrush="#FFC5BCBC" BorderThickness="1" Padding="2,2,2,2" Margin="5,0,5,6" Grid.Column="0" Height="185" VerticalAlignment="Bottom" Grid.Row="1" Background="#FFFFC162" >
+        <Border Name="sendControlBorder"  BorderBrush="#FFC5BCBC" BorderThickness="1" Padding="2,2,2,2" Margin="5,0,5,6" Grid.Column="0" Height="185" VerticalAlignment="Bottom" Grid.Row="1" Background="#00FFC162" >
             <Grid Margin="0,0,0,0" Height="180" VerticalAlignment="Top" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"/>
@@ -164,7 +164,7 @@
         </ScrollViewer>
 
         <ScrollViewer x:Name="picScrollViewer"   Grid.Column="1" HorizontalAlignment="Stretch" Margin="5,5,5,5"   Grid.Row="0"  VerticalAlignment="Stretch"  >
-            <Image  x:Name="picImage"   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  >
+            <Image  x:Name="picImage"   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  Height="325"  >
 
             </Image>
             <!--<ScrollViewer.ToolTip>
@@ -176,7 +176,7 @@
 
         <!--发送文本窗口-->
         <ScrollViewer Grid.Column="1" HorizontalAlignment="Stretch" Margin="5,5,5,5" Grid.Row="1"  VerticalAlignment="Stretch">
-            <TextBox  x:Name="sendTextBox"  Foreground="White" Background="Black" PreviewTextInput="SendTextBox_PreviewTextInput"  AcceptsReturn="True"  TextWrapping="Wrap"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="宋体" FontSize="15">
+            <TextBox  x:Name="sendTextBox"  Foreground="Black" Background="White" PreviewTextInput="SendTextBox_PreviewTextInput"  AcceptsReturn="True"  TextWrapping="Wrap"  HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="宋体" FontSize="15" Height="186">
 
             </TextBox>
             <ScrollViewer.ToolTip>
@@ -185,7 +185,7 @@
             </ScrollViewer.ToolTip>
         </ScrollViewer>
 
-        <Grid Grid.Row="2"  Grid.ColumnSpan="2" Margin="5,2,5,2">
+        <Grid Grid.Row="2"  Grid.ColumnSpan="2" Margin="5,2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition Width="87"></ColumnDefinition>
@@ -199,20 +199,20 @@
             <TextBlock HorizontalAlignment="Stretch" Name="statusTextBlock" Foreground="Red" Grid.Column="0" ></TextBlock>
 
             <!--接收字节数-->
-            <Label HorizontalAlignment="Right" Padding="0,0,0,0" Grid.Column="1" Width="72" Margin="0,3,10,0">接收字节数：</Label>
-            <TextBlock Name="statusReceiveByteTextBlock" HorizontalAlignment="Stretch" Foreground="Blue"  Grid.Column="2" Margin="5,3,5,0" ></TextBlock>
+            <Label Padding="0,0,0,0" Grid.Column="1" Margin="15,3,0,0">接收字节数：</Label>
+            <TextBlock Name="statusReceiveByteTextBlock" HorizontalAlignment="Stretch" Foreground="Blue"  Grid.Column="1" Margin="81,3,16,0" Grid.ColumnSpan="2" ></TextBlock>
 
             <!--发送字节数-->
-            <Label HorizontalAlignment="Right" Padding="0,0,0,0" Width="72" Grid.Column="3" Margin="0,3,5,0">发送字节数：</Label>
-            <TextBlock Name="statusSendByteTextBlock" HorizontalAlignment="Stretch" Foreground="Blue"   Grid.Column="4" Margin="5,3,5,0"></TextBlock>
+            <Label HorizontalAlignment="Left" Padding="0,0,0,0" Width="67" Grid.Column="2" Margin="54,3,0,0" Grid.ColumnSpan="2">发送字节数：</Label>
+            <TextBlock Name="statusSendByteTextBlock" Foreground="Blue"   Grid.Column="3" Margin="52,0,0,0" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="61" Grid.ColumnSpan="2"/>
 
             <!--帧数-->
-            <Label HorizontalAlignment="Right" Padding="0,0,0,0" Width="72" Grid.Column="3" Margin="0,3,5,0">发送字节数：</Label>
-            <TextBlock Name="statusFrameTextBlock" HorizontalAlignment="Stretch" Foreground="Blue"   Grid.Column="5" Margin="10,0,71,3"></TextBlock>
+            <Label HorizontalAlignment="Right" Padding="0,0,0,0" Width="43" Grid.Column="4" Height="22" VerticalAlignment="Bottom">发送帧：</Label>
+            <TextBlock Name="statusFrameTextBlock" HorizontalAlignment="Stretch" Foreground="Blue"   Grid.Column="5" Margin="0,3,81,0" RenderTransformOrigin="-0.131,0.545"></TextBlock>
 
 
             <!--计数清零按钮-->
-            <Button Name="countClearButton" Click="countClearButton_Click" Content="计数清零" Grid.Column="5" HorizontalAlignment="Right" Margin="0,0,5,0" Width="54"  />
+            <Button Name="countClearButton" Click="countClearButton_Click" Content="计数清零" Grid.Column="5" HorizontalAlignment="Right" Margin="0,0,21,0" Width="54"  />
 
 
 
