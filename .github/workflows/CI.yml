@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - OS-Q
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        example:
+          - "ModbusBluepill"
+          - "ModbusBluepillUSB"
+          - "ModbusF103"
+          - "ModbusF303"
+          - "ModbusL152DMA"
+          - "ModbusL475-IOT01A1"
+          - "ModbusSTM32F4-discovery"
+          - "ModbusF429"
+          - "ModbusF429TCP"
+          - "ModbusF429DMA"
+          - "ModbusH743"
+          - "ModbusH743TCP"
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v2
+        with:
+          submodules: "recursive"
+          fetch-depth: 1
+
+      - name: build
+        uses: Qful/cubeide-action@master
+        with:
+          project-path: Examples/${{ matrix.example }}
+          project-target: ${{ matrix.example }}
+
+      - name: upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ matrix.example }}
+          path: Examples/${{ matrix.example }}/Debug
